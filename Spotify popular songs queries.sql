@@ -70,3 +70,17 @@ GROUP BY
   released_year
 ORDER BY
   songs_per_year DESC
+
+
+  -- Average song charecteristics, rounded --
+
+SELECT 
+  ROUND(AVG(danceability__),2) AS avg_danceability,
+  ROUND(AVG(valence__),2) AS avg_valence,
+  ROUND(AVG(energy__),2) AS avg_energy,
+  ROUND(AVG(acousticness__),2) AS avg_acousticness,
+  ROUND(AVG(instrumentalness__),2) AS avg_instrumentalness,
+  ROUND(AVG(liveness__),2) AS avg_liveness,
+  ROUND(AVG(speechiness__),2) AS avg_speechiness
+FROM
+  `bombata-415714.Spotify.popular_songs`
